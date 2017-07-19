@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  background: #808080;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3fada8, #808080);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wrap {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.user {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -1.28205%;
+  margin-right: -1.28205%;
+  margin-top: 100px;
+  position: relative;
+}
+
+.user_avatar {
+  float: left;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+
+.user_avatar img {
+  width: 100%;
+}
+
+.user_fio {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #34495E;
+  margin-bottom: 8px;
+  text-shadow: 0px 1px 2px rgba(0, 209, 255, 0.56);
+}
+
+.user_balans {
+  float: right;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  color: #16A085;
+}
+
+.user_balans span.text {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495E;
+  font-size: 18px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  border-bottom: 1px solid #34495E;
+  display: inline-block;
+}
+
+.user .updateBalabs {
+  float: left;
+  padding: 10px 15px;
+  border: 1px solid #34495E;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.user_updateDateError {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: red;
+  font-size: 30px;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+.data {
+  margin-left: 1.28205%;
+  margin-right: 1.28205%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 47.4359%;
+}
+
+.input-data {
+  margin-left: 1.28205%;
+  margin-right: 1.28205%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 47.4359%;
+}
+
+.dataBox {
+  padding: 30px;
+  background: #ADA996;
+  border-radius: 20px;
+  border: 5px solid whitesmoke;
+  box-shadow: 0px 0px 40px 0px rgba(194, 220, 226, 0.91);
+}
+
+.dataBox_header {
+  color: dimgray;
+  border-bottom: 1px solid dimgray;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-family: Verdana;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.dataBox--left {
+  border-right: none;
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+}
+
+.dataBox--right {
+  border-left: none;
+  background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+}
+
+.dataBox label {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.dataBox label span {
+  display: inline-block;
+  width: 80px;
+}
+
+.dataBox label input {
+  border-bottom: 1px solid dimgray;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  background-color: transparent;
+  padding-bottom: 5px;
+}
+
+.dataBox label.incorrect {
+  color: red;
+}
+
+.dataBox label.incorrect input {
+  border-bottom: 1px solid red;
+}
+
+.dataBox input[type=submit] {
+  display: block;
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: #BDC3C7;
+  color: #FFF;
+  font-size: 16px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.dataBox input[type=submit]:hover {
+  background-color: #6C7A89;
+}
+/*# sourceMappingURL=style.css.map */
