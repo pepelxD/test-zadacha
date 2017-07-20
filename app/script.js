@@ -19,18 +19,19 @@
             });
         }
         this.fields.forEach(function(elem, i){
+            var res = null;
             if(elem.nodeName.toLowerCase() == 'input') {
                 switch (elem.type.toLowerCase()) {
                     case 'text' :
                         if(elem.name === 'lastname' || elem.name === 'name' || elem.name === 'patronymic') {
-                            var res = elem.value.search(/^[а-яА-ЯёЁa-zA-Z]+$/);
+                            res = elem.value.search(/^[а-яА-ЯёЁa-zA-Z]+$/);
                             if(elem.value.length > 15 || res == -1) {
                                 valid = false;
                                 sowError(elem);
                             }
                         }
                         if(elem.name === 'age') {
-                            var res = elem.value.search(/^\d+$/);
+                            res = elem.value.search(/^\d+$/);
                             if(18 > elem.value || elem.value > 50 || res == -1) {
                                 valid = false;
                                 sowError(elem);
@@ -43,16 +44,14 @@
 
         return valid;
     }
-    Form.prototype.send = function(event) {
+    Form.prototype.send = function() {
         event.preventDefault(); 
         if(!this.checkField()) return false;
-        this.callback();
+        this.callback(event);
+
     }
 
-
-
     function User(options){
-        var option = options;
         if(!options.elem) return;
         this.opt = {
             elem: null,
@@ -114,6 +113,7 @@
                     var xhr = new XMLHttpRequest();
                     // проверим что была нажата кнопка оновления баланса
                     if(event.target.dataset.type == 'update-balans') {
+                        console.log(event)
                         formData = new FormData();
                         formData.append('update', 'balans');
                     } else {
@@ -123,6 +123,7 @@
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState == 4 && xhr.status == 200) {
                             response = JSON.parse(xhr.responseText);
+                            console.log(xhr.responseText)
                             _this.render(response);
                         }
                     }
